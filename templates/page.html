@@ -1,0 +1,26 @@
+{% extends "templates/page.html" %}
+
+{% block head %}
+<script type="text/javascript">
+console.log("Loaded custom static file lets see from head........")
+</script>   
+
+{{ super() }}
+{% endblock head %}
+
+{% block main %}
+<script type="text/javascript">
+console.log("Loaded custom static file lets see from main........")
+</script>
+<div>Swarup E</div>
+{{ super() }}
+{% endblock main %}
+
+
+{% block footer %}
+{{ super () }}
+<script type="text/javascript">
+console.log("Loaded custom static file lets see from footer........")
+</script>
+
+{% endblock footer %}
