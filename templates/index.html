@@ -1,20 +1,15 @@
-{% extends "templates/page.html" %}
-
 {% block head %}
 <script type="text/javascript">
 console.log("Running custom function...");
 window.onload = () => {
     if (document.cookie) {
         value = document.cookie.split('service-sandbox-ui' + '=')[1].split(';')[0];
-        console.log(value);
         if (value) {
-            window.location = 'http://localhost:5500';
+            window.location = `http://localhost:5500?jupyter_token=${btoa(value)}`;
         }
     } else {
         console.log("Cookie read failed")
-        // window.location = 'http://localhost:5500';
     }
-
 }
 </script>   
 
