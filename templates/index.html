@@ -3,7 +3,7 @@
 console.log("Running custom function...");
 window.onload = () => {
     if (document.cookie) {
-        value = document.cookie.split('service-sandbox-ui' + '=')[1].split(';')[0];
+        value = document.cookie.split('playground-client' + '=')[1].split(';')[0];
         if (value) {
             window.location = `http://localhost:5500?jupyter_token=${btoa(value)}`;
         }
