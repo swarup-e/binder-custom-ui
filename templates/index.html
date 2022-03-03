@@ -5,7 +5,8 @@ window.onload = () => {
     if (document.cookie) {
         value = document.cookie.split('playground-client' + '=')[1].split(';')[0];
         if (value) {
-            window.location = `http://localhost:4500?jupyter_token=${btoa(value)}`;
+            document.cookie = "playground-client="+ value + ";domain=" + "localhost";
+            window.location = `http://localhost:4500`;
         }
     } else {
         console.log("Cookie read failed")
