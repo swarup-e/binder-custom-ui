@@ -5,7 +5,7 @@ window.onload = () => {
     if (document.cookie) {
         value = document.cookie.split('playground-client' + '=')[1].split(';')[0];
         if (value) {
-            document.cookie = "playground-client="+ value + ";domain=" + "localhost";
+            document.cookie = "playground-client="+ value + ";domain=" + "iudx.io";
         }
     } else {
         console.log("Cookie read failed")
