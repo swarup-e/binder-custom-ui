@@ -3,9 +3,9 @@
 console.log("Running custom function...");
 window.onload = () => {
     if (document.cookie) {
-        value = document.cookie.split('playground-client' + '=')[1].split(';')[0];
+        value = document.cookie.split('service-playground-client' + '=')[1].split(';')[0];
         if (value) {
-            document.cookie = "playground-client="+ value + ";domain=" + "adex.org.in";
+            document.cookie = "service-playground-client="+ value + ";domain=" + "adex.org.in";
         }
     } else {
         console.log("Cookie read failed")
